@@ -1,0 +1,8 @@
+/RPMS
+*.o
+/translations/*.qm
+/harbour-pdb-reader
+/Makefile
+/*.list
+/moc*.cpp
+/*.pro.*
