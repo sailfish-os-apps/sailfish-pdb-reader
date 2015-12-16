@@ -33,6 +33,7 @@
 #endif
 
 #include <sailfishapp.h>
+#include "exec.h"
 
 
 int main(int argc, char *argv[])
@@ -49,3 +50,15 @@ int main(int argc, char *argv[])
     return SailfishApp::main(argc, argv);
 }
 
+std::string exec(const char* cmd) {
+    FILE* pipe = popen(cmd, "r");
+    if (!pipe) return "ERROR";
+    char buffer[128];
+    std::string result = "";
+    while(!feof(pipe)) {
+        if(fgets(buffer, 128, pipe) != NULL)
+            result += buffer;
+    }
+    pclose(pipe);
+    return result;
+}
