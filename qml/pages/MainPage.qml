@@ -11,6 +11,7 @@ Page {
     property string welcometext: qsTr("Hello, Sailor! Choose your book from pull down menu!")
     readonly property string dir: qsTr("Books")
     readonly property string path: "/home/nemo/"+dir
+    property string current_book
 
     SilicaFlickable {
         anchors.fill: parent
@@ -20,15 +21,17 @@ Page {
             visible: false
             signal bookChoosen(string bookname)
             onBookChoosen: {
-                console.log(bookname);
+                current_book = bookname;
+                textarea.horizontalAlignment = Text.AlignHCenter;
+                textarea.text = qsTr("Loading...");
+                console.log(ct.getEncoding(bookname,dir));
             }
 
             MenuItem {
                 text: qsTr("Choose book")
                 onClicked: {
                     var files = ct.listbooks(dir);
-                    var book = pageStack.push(Qt.createComponent("ListBooks.qml"),{books: files});
-                    //console.log(book.selectedbook)
+                    pageStack.push(Qt.createComponent("ListBooks.qml"),{books: files});
                 }
             }
         }
