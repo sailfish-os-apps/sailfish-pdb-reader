@@ -18,8 +18,6 @@ SOURCES += src/harbour-pdb-reader.cpp
 
 OTHER_FILES += qml/harbour-pdb-reader.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/harbour-pdb-reader.changes.in \
     rpm/harbour-pdb-reader.spec \
     rpm/harbour-pdb-reader.yaml \
@@ -32,5 +30,10 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-pdb-reader-cs_CZ.ts
 
 HEADERS += \
-    exec.h
+    exec.h \
+    cppthings.h
+
+DISTFILES += \
+    qml/pages/MainPage.qml \
+    qml/db.js
 

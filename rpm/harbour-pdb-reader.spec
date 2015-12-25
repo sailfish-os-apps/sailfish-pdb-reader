@@ -20,7 +20,7 @@ License:    WTFPL
 URL:        https://github.com/RikudouSage/sailfish-pdb-reader
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-pdb-reader.yaml
-Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   sailfishsilica-qt5 >= 0.10.9, txt2pdbdoc, uchardet
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
