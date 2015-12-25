@@ -18,10 +18,17 @@ Page {
         PullDownMenu {
             id: pulldown
             visible: false
+            signal bookChoosen(string bookname)
+            onBookChoosen: {
+                console.log(bookname);
+            }
+
             MenuItem {
                 text: qsTr("Choose book")
                 onClicked: {
                     var files = ct.listbooks(dir);
+                    var book = pageStack.push(Qt.createComponent("ListBooks.qml"),{books: files});
+                    //console.log(book.selectedbook)
                 }
             }
         }
@@ -68,8 +75,8 @@ Page {
             Component.onCompleted: {
                 ct.mkFakeBooks();
                 DB.open().transaction(function(tx) {
-                    /*tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
-                    tx.executeSql("DROP TABLE IF EXISTS books");*/
+                    tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
+                    tx.executeSql("DROP TABLE IF EXISTS books");
 
                     tx.executeSql("CREATE TABLE IF NOT EXISTS firstrun (firstrun INT)");
                     // original_name - name of the PDB file, txt_path - path to converted txt file, position - position in the book

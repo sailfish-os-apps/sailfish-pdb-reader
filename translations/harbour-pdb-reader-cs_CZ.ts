@@ -10,6 +10,14 @@
     </message>
 </context>
 <context>
+    <name>ListBooks</name>
+    <message>
+        <location filename="../qml/pages/ListBooks.qml" line="22"/>
+        <source>Choose book</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="10"/>
@@ -27,17 +35,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="22"/>
+        <location filename="../qml/pages/MainPage.qml" line="27"/>
         <source>Choose book</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="57"/>
+        <location filename="../qml/pages/MainPage.qml" line="63"/>
         <source>PDB book reader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="62"/>
+        <location filename="../qml/pages/MainPage.qml" line="68"/>
         <source>Loading...</source>
         <translation type="unfinished"></translation>
     </message>

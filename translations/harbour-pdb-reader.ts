@@ -9,6 +9,13 @@
     </message>
 </context>
 <context>
+    <name>ListBooks</name>
+    <message>
+        <source>Choose book</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainPage</name>
     <message>
         <source>Choose book</source>
