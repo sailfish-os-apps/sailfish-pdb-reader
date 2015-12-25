@@ -73,7 +73,6 @@ Page {
                 horizontalAlignment: Text.AlignHCenter
             }
             Component.onCompleted: {
-                ct.mkFakeBooks();
                 DB.open().transaction(function(tx) {
                     tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
                     tx.executeSql("DROP TABLE IF EXISTS books");

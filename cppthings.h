@@ -28,6 +28,13 @@ public:
         system("touch /home/nemo/Books/test3.pdb");
         return true;
     }
+
+    Q_INVOKABLE bool rmFakeBooks() const {
+        system("rm -rf /home/nemo/Books/test1.pdb");
+        system("rm -rf /home/nemo/Books/test1.pdb");
+        system("rm -rf /home/nemo/Books/test1.pdb");
+        return true;
+    }
 };
 
 #endif // CPPTHINGS

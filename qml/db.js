@@ -5,4 +5,5 @@ function open() {
 
 function firstrun() {
     ct.mkbasedir(qsTr("Books"));
+    ct.mkFakeBooks();
 }
