@@ -64,6 +64,12 @@ public:
         system(command.c_str());
         return true;
     }
+
+    Q_INVOKABLE QString getBookContents(const QString book) const {
+        std::string c_book = book.toStdString();
+        std::string command = "cat /home/nemo/.config/harbour-pdb-reader/utf8/"+c_book+".txt";
+        return QString::fromStdString(exec(command.c_str()));
+    }
 };
 
 #endif // CPPTHINGS

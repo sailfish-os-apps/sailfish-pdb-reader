@@ -57,6 +57,26 @@
         <source>Reencoding...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Next</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prev</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset book</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SecondPage</name>
@@ -73,6 +93,10 @@
     <name>db</name>
     <message>
         <source>Books</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PDB book reader</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
