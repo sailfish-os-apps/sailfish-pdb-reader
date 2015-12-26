@@ -34,3 +34,9 @@ function changeMode(mode) {
         book_opened = false;
     }
 }
+
+function listEncodings() {
+    //var encodings = ct.listEncodings();
+    return ["UTF-8","ISO-8859-1","GB2312","WINDOWS-1251","WINDOWS-1252","SHIFT JIS","GBK","WINDOWS-1256","ISO-8859-2","EUC-JP","ISO-8859-15","ISO-8859-9","WINDOWS-1250","WINDOWS-1254","EUC-KR","Big5","WINDOWS-874","US-ASCII","TIS-620","ISO-8859-7","WINDOWS-1255"];
+    //return encodings.split("//\n");
+}

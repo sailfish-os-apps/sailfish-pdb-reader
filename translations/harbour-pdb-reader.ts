@@ -16,6 +16,13 @@
     </message>
 </context>
 <context>
+    <name>ListEncoding</name>
+    <message>
+        <source>Choose book encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainPage</name>
     <message>
         <source>Choose book</source>
@@ -75,17 +82,6 @@
     </message>
     <message>
         <source>Reset book</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SecondPage</name>
-    <message>
-        <source>Nested Page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Item</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -36,5 +36,6 @@ HEADERS += \
 DISTFILES += \
     qml/pages/MainPage.qml \
     qml/db.js \
-    qml/pages/ListBooks.qml
+    qml/pages/ListBooks.qml \
+    qml/pages/ListEncoding.qml
 

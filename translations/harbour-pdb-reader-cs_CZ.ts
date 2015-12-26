@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="cs_CZ">
 <context>
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="8"/>
         <source>My Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Můj obal</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,15 @@
     <message>
         <location filename="../qml/pages/ListBooks.qml" line="22"/>
         <source>Choose book</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvolte knížku</translation>
+    </message>
+</context>
+<context>
+    <name>ListEncoding</name>
+    <message>
+        <location filename="../qml/pages/ListEncoding.qml" line="19"/>
+        <source>Choose book encoding</source>
+        <translation>Zvolte kódování knížky</translation>
     </message>
 </context>
 <context>
@@ -22,91 +30,78 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="10"/>
         <source>Hello, Sailor! It looks like it&apos;s your first time using this app. The usage is pretty simple - put all your books in Books directory and then use pull down menu to choose your book. Then enjoy reading! :)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vítej, námořníku! Vypadá to, že aplikaci spouštíš poprvé. Používání je úplně jednoduché - dej všechny knížky do složky Knihy a pak použij stahovací menu pro zvolení knížky. Pak si jen užívej čtení! :)</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="11"/>
         <source>Hello, Sailor! Choose your book from pull down menu!</source>
-        <translation type="unfinished"></translation>
+        <translation>Vítej, námořníku! Zvol si knížku ze stahovacího menu!</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="12"/>
         <source>Books</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="102"/>
-        <source>Close book</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="96"/>
-        <source>Change encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Knihy</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="42"/>
         <source>Accessing file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Přistupování k souboru...</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="44"/>
         <location filename="../qml/pages/MainPage.qml" line="46"/>
         <source>Detecting encoding...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="56"/>
-        <source>Reencoding...</source>
-        <translation type="unfinished"></translation>
+        <translation>Detekování kódování...</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="58"/>
+        <source>Reencoding...</source>
+        <translation>Změna kódování...</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="60"/>
         <source>Reading book content...</source>
-        <translation type="unfinished"></translation>
+        <translation>Čtení obsahu knihy...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="71"/>
+        <location filename="../qml/pages/MainPage.qml" line="73"/>
         <source>Choose book</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvolte knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="81"/>
+        <location filename="../qml/pages/MainPage.qml" line="83"/>
         <source>Reset book</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetovat knihu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="138"/>
+        <location filename="../qml/pages/MainPage.qml" line="98"/>
+        <source>Change encoding</source>
+        <translation>Změnit kódování</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <source>Close book</source>
+        <translation>Zavřít knížku</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="155"/>
         <source>PDB book reader</source>
-        <translation type="unfinished"></translation>
+        <translation>PDB čtečka knih</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="143"/>
+        <location filename="../qml/pages/MainPage.qml" line="160"/>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Načítání...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="170"/>
-        <source>Prev</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="154"/>
+        <location filename="../qml/pages/MainPage.qml" line="171"/>
         <source>Next</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SecondPage</name>
-    <message>
-        <location filename="../qml/pages/SecondPage.qml" line="42"/>
-        <source>Nested Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Další</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SecondPage.qml" line="49"/>
-        <source>Item</source>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/pages/MainPage.qml" line="187"/>
+        <source>Prev</source>
+        <translation>Předchozí</translation>
     </message>
 </context>
 <context>
@@ -114,12 +109,12 @@
     <message>
         <location filename="../qml/db.js" line="7"/>
         <source>Books</source>
-        <translation type="unfinished"></translation>
+        <translation>Knihy</translation>
     </message>
     <message>
         <location filename="../qml/db.js" line="28"/>
         <source>PDB book reader</source>
-        <translation type="unfinished"></translation>
+        <translation>PDB čtečka knih</translation>
     </message>
 </context>
 </TS>

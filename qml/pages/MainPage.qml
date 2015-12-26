@@ -45,11 +45,13 @@ Page {
                 var encoding = ct.getEncoding(current_book+".txt");
                 textarea.text = qsTr("Detecting encoding...")+" "+encoding;
                 DB.open().transaction(function(tx) {
-                    var res = tx.executeSql("SELECT original_name,position FROM books WHERE original_name='"+current_book+"'");
+                    var res = tx.executeSql("SELECT original_name,position,encoding FROM books WHERE original_name='"+current_book+"'");
                     if(!res.rows.length) {
                         DB.initBook(current_book,encoding);
                     } else {
                         position = res.rows.item(0).position;
+                        encoding = res.rows.item(0).encoding;
+                        console.log(encoding);
                         console.log(position);
                     }
 
@@ -94,6 +96,21 @@ Page {
                 visible: false
                 id: book2
                 text: qsTr("Change encoding")
+                signal encodingChosen(string encoding)
+
+                onEncodingChosen: {
+                    ct.reencode(current_book,encoding);
+                    DB.open().transaction(function(tx) {
+                        tx.executeSql("UPDATE books SET encoding='"+encoding+"' WHERE original_name='"+current_book+"'");
+                        current_whole_text = ct.getBookContents(current_book);
+                        current_visible_text = current_whole_text.substr(position,step);
+                        textarea.text = current_visible_text;
+                    });
+                }
+
+                onClicked: {
+                    pageStack.push(Qt.createComponent("ListEncoding.qml"));
+                }
             }
 
             MenuItem {
@@ -143,7 +160,7 @@ Page {
                 text: qsTr("Loading...")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeMedium
-                width: screen.width - Theme.paddingLarge
+                width: screen.width - Theme.paddingLarge * 2
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
             }
