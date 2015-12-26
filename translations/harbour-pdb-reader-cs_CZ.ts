@@ -35,18 +35,38 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="31"/>
+        <location filename="../qml/pages/MainPage.qml" line="26"/>
+        <source>Accessing file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="28"/>
+        <location filename="../qml/pages/MainPage.qml" line="30"/>
+        <source>Detecting encoding...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="36"/>
+        <source>Reencoding...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="38"/>
+        <source>Reading book content...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="43"/>
         <source>Choose book</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="66"/>
+        <location filename="../qml/pages/MainPage.qml" line="78"/>
         <source>PDB book reader</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="26"/>
-        <location filename="../qml/pages/MainPage.qml" line="71"/>
+        <location filename="../qml/pages/MainPage.qml" line="83"/>
         <source>Loading...</source>
         <translation type="unfinished"></translation>
     </message>

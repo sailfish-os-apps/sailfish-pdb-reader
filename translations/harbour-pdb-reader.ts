@@ -41,6 +41,22 @@
         <source>Hello, Sailor! It looks like it&apos;s your first time using this app. The usage is pretty simple - put all your books in Books directory and then use pull down menu to choose your book. Then enjoy reading! :)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Detecting encoding...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accessing file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reading book content...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reencoding...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SecondPage</name>

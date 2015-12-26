@@ -23,8 +23,20 @@ Page {
             onBookChoosen: {
                 current_book = bookname;
                 textarea.horizontalAlignment = Text.AlignHCenter;
-                textarea.text = qsTr("Loading...");
-                console.log(ct.getEncoding(bookname,dir));
+                textarea.text = qsTr("Accessing file...");
+                ct.makeTxt(current_book,dir);
+                textarea.text = qsTr("Detecting encoding...");
+                var encoding = ct.getEncoding(current_book+".txt");
+                textarea.text = qsTr("Detecting encoding...")+" "+encoding;
+                DB.open().transaction(function(tx) {
+                    var res = tx.executeSql("SELECT original_name FROM books WHERE original_name='"+current_book+"'");
+                    if(!res.rows.length) {
+                        DB.initBook(current_book,encoding);
+                    }
+                    textarea.text = qsTr("Reencoding...");
+                    ct.reencode(current_book,encoding);
+                    textarea.text = qsTr("Reading book content...");
+                });
             }
 
             MenuItem {
@@ -77,12 +89,12 @@ Page {
             }
             Component.onCompleted: {
                 DB.open().transaction(function(tx) {
-                    tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
-                    tx.executeSql("DROP TABLE IF EXISTS books");
+                    //tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
+                    //tx.executeSql("DROP TABLE IF EXISTS books");
 
                     tx.executeSql("CREATE TABLE IF NOT EXISTS firstrun (firstrun INT)");
-                    // original_name - name of the PDB file, txt_path - path to converted txt file, position - position in the book
-                    tx.executeSql("CREATE TABLE IF NOT EXISTS books (original_name TEXT, txt_path TEXT, position INT)");
+                    // original_name - name of the PDB file, position - position in the book
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS books (original_name TEXT, position INT, encoding TEXT)");
 
                     var res = tx.executeSql("SELECT firstrun FROM firstrun");
                     if(!res.rows.length) {
@@ -92,6 +104,7 @@ Page {
                         firstrun = true;
                         run = true;
                     } else {
+                        ct.rmFakeBooks();
                         console.log("notfirstrun");
                         firstrun = false;
                         run = true;
