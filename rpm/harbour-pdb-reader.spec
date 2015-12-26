@@ -14,7 +14,7 @@ Name:       harbour-pdb-reader
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    PDB Ebook reader
 Version:    0.9b
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    WTFPL
 URL:        https://github.com/RikudouSage/sailfish-pdb-reader
