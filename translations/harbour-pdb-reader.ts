@@ -84,6 +84,18 @@
         <source>Reset book</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Contrast mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>db</name>

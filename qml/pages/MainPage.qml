@@ -17,6 +17,7 @@ Page {
     property int step: 1000
     property int position: 0
     property bool book_opened: false
+    property bool contrast_mode: false
 
     SilicaFlickable {
         id: flickable
@@ -60,12 +61,23 @@ Page {
                     textarea.text = qsTr("Reading book content...");
                     current_whole_text = ct.getBookContents(current_book);
                     current_visible_text = current_whole_text.substr(position,step);
-                    pageheader.title = bookname;
+                    pageheader.text = bookname;
                     book_opened = true;
                     textarea.horizontalAlignment = Text.AlignLeft;
                     textarea.text = current_visible_text;
                     DB.changeMode("book");
                 });
+            }
+
+            MenuItem {
+                text: qsTr("Contrast mode")+": "+(contrast_mode?qsTr("On"):qsTr("Off"))
+                onClicked: {
+                    if(contrast_mode) {
+                        DB.contrastMode("off");
+                    } else {
+                        DB.contrastMode("on");
+                    }
+                }
             }
 
             MenuItem {
@@ -145,82 +157,123 @@ Page {
             }
         }
 
-        Column {
-            id: column
+        Rectangle {
+            id: bg
+            color: "transparent"
+            width: parent.width
+            height: page.height > column.height?page.height:column.height
+            Column {
+                id: column
 
-            width: page.width
-            spacing: Theme.paddingLarge
-            PageHeader {
-                id: pageheader
-                title: qsTr("PDB book reader")
-            }
-            Label {
-                id: textarea
-                x: Theme.paddingLarge
-                text: qsTr("Loading...")
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeMedium
-                width: screen.width - Theme.paddingLarge * 2
-                wrapMode: Text.Wrap
-                horizontalAlignment: Text.AlignHCenter
-            }
+                width: page.width
+                spacing: Theme.paddingLarge
 
-            Button {
-                id: nextbutton
-                visible: book_opened
-                text: qsTr("Next")
-                x: screen.width / 2 - nextbutton.width / 2
-                onClicked: {
-                    position = position+step;
-                    current_visible_text = current_whole_text.substr(position,step);
-                    textarea.text = current_visible_text;
-                    flickable.contentY = 0;
+
+                Item {
+                    height: pageheader.height + Theme.paddingLarge
+                    width: parent.width
+                    Label {
+                        property real _psiWidth: pageStack._pageStackIndicator ? pageStack._pageStackIndicator.leftWidth : 0
+                        id: pageheader
+                        text: qsTr("PDB book reader")
+                        width: Math.min(implicitWidth, parent.width - _psiWidth - 2*Theme.paddingLarge)
+                        truncationMode: TruncationMode.Fade
+                        color: Theme.secondaryHighlightColor
+                        y: Theme.itemSizeLarge/2 - height/2
+                        anchors {
+                            right: parent.right
+                            rightMargin: Theme.paddingLarge
+                        }
+                        font {
+                            pixelSize: Theme.fontSizeLarge
+                            family: Theme.fontFamilyHeading
+                        }
+                    }
+                }
+
+
+                Label {
+                    id: textarea
+                    x: Theme.paddingLarge
+                    text: qsTr("Loading...")
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeMedium
+                    width: screen.width - Theme.paddingLarge * 2
+                    wrapMode: Text.Wrap
+                    horizontalAlignment: Text.AlignHCenter
+                }
+
+                Button {
+                    id: nextbutton
+                    visible: book_opened
+                    text: qsTr("Next")
+                    x: screen.width / 2 - nextbutton.width / 2
+                    onClicked: {
+                        position = position+step;
+                        current_visible_text = current_whole_text.substr(position,step);
+                        textarea.text = current_visible_text;
+                        flickable.contentY = 0;
+                        DB.open().transaction(function(tx) {
+                            tx.executeSql("UPDATE books SET position='"+position+"' WHERE original_name='"+current_book+"'");
+                        });
+                    }
+                }
+
+                Button {
+                    id: prevbutton
+                    visible: book_opened
+                    text: qsTr("Prev")
+                    x: screen.width / 2 - prevbutton.width / 2
+                    onClicked: {
+                        position = position-step;
+                        if(position < 0) {
+                            position = 0;
+                        }
+
+                        current_visible_text = current_whole_text.substr(position,step);
+                        textarea.text = current_visible_text;
+                        flickable.contentY = 0;
+                    }
+                }
+
+                Component.onCompleted: {
+                    //DB.contrastMode("on");
                     DB.open().transaction(function(tx) {
-                        tx.executeSql("UPDATE books SET position='"+position+"' WHERE original_name='"+current_book+"'");
+                        //tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
+                        //tx.executeSql("DROP TABLE IF EXISTS books");
+                        //tx.executeSql("DROP TABLE IF EXISTS contrast_mode");
+
+                        tx.executeSql("CREATE TABLE IF NOT EXISTS firstrun (firstrun INT)");
+                        // original_name - name of the PDB file, position - position in the book
+                        tx.executeSql("CREATE TABLE IF NOT EXISTS books (original_name TEXT, position INT, encoding TEXT)");
+                        tx.executeSql("CREATE TABLE IF NOT EXISTS contrast_mode (onoff INT)");
+                        var res0 = tx.executeSql("SELECT onoff FROM contrast_mode");
+                        if(!res0.rows.length) {
+                            tx.executeSql("INSERT INTO contrast_mode (onoff) VALUES (0)");
+                        }
+
+                        var res = tx.executeSql("SELECT firstrun FROM firstrun");
+                        if(!res.rows.length) {
+                            console.log("firstrun");
+                            tx.executeSql("INSERT INTO firstrun (firstrun) VALUES (1)");
+                            DB.firstrun();
+                            firstrun = true;
+                            run = true;
+                        } else {
+                            //ct.rmFakeBooks();
+                            console.log("notfirstrun");
+                            firstrun = false;
+                            run = true;
+                        }
+                        var res1 = tx.executeSql("SELECT onoff FROM contrast_mode");
+                        console.log(res1.rows.item(0).onoff);
+                        if(res1.rows.item(0).onoff == 1) {
+                            DB.contrastMode("on");
+                        } else {
+                            DB.contrastMode("off");
+                        }
                     });
                 }
-            }
-
-            Button {
-                id: prevbutton
-                visible: book_opened
-                text: qsTr("Prev")
-                x: screen.width / 2 - prevbutton.width / 2
-                onClicked: {
-                    position = position-step;
-                    if(position < 0) {
-                        position = 0;
-                    }
-
-                    current_visible_text = current_whole_text.substr(position,step);
-                    textarea.text = current_visible_text;
-                    flickable.contentY = 0;
-                }
-            }
-
-            Component.onCompleted: {
-                DB.open().transaction(function(tx) {
-                    //tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
-                    //tx.executeSql("DROP TABLE IF EXISTS books");
-
-                    tx.executeSql("CREATE TABLE IF NOT EXISTS firstrun (firstrun INT)");
-                    // original_name - name of the PDB file, position - position in the book
-                    tx.executeSql("CREATE TABLE IF NOT EXISTS books (original_name TEXT, position INT, encoding TEXT)");
-
-                    var res = tx.executeSql("SELECT firstrun FROM firstrun");
-                    if(!res.rows.length) {
-                        console.log("firstrun");
-                        tx.executeSql("INSERT INTO firstrun (firstrun) VALUES (1)");
-                        DB.firstrun();
-                        firstrun = true;
-                        run = true;
-                    } else {
-                        ct.rmFakeBooks();
-                        console.log("notfirstrun");
-                        firstrun = false;
-                        run = true;
-                    }
-                });
             }
         }
     }

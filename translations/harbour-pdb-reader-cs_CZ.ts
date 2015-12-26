@@ -43,63 +43,78 @@
         <translation>Knihy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="42"/>
+        <location filename="../qml/pages/MainPage.qml" line="43"/>
         <source>Accessing file...</source>
         <translation>Přistupování k souboru...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="44"/>
-        <location filename="../qml/pages/MainPage.qml" line="46"/>
+        <location filename="../qml/pages/MainPage.qml" line="45"/>
+        <location filename="../qml/pages/MainPage.qml" line="47"/>
         <source>Detecting encoding...</source>
         <translation>Detekování kódování...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="58"/>
+        <location filename="../qml/pages/MainPage.qml" line="59"/>
         <source>Reencoding...</source>
         <translation>Změna kódování...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="60"/>
+        <location filename="../qml/pages/MainPage.qml" line="61"/>
         <source>Reading book content...</source>
         <translation>Čtení obsahu knihy...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="73"/>
+        <location filename="../qml/pages/MainPage.qml" line="85"/>
         <source>Choose book</source>
         <translation>Zvolte knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="83"/>
+        <location filename="../qml/pages/MainPage.qml" line="73"/>
+        <source>Contrast mode</source>
+        <translation>Kontrastní mód</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="73"/>
+        <source>On</source>
+        <translation>Zapnut</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="73"/>
+        <source>Off</source>
+        <translation>Vypnut</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="95"/>
         <source>Reset book</source>
         <translation>Resetovat knihu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="98"/>
+        <location filename="../qml/pages/MainPage.qml" line="110"/>
         <source>Change encoding</source>
         <translation>Změnit kódování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Close book</source>
         <translation>Zavřít knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="155"/>
+        <location filename="../qml/pages/MainPage.qml" line="178"/>
         <source>PDB book reader</source>
         <translation>PDB čtečka knih</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="160"/>
+        <location filename="../qml/pages/MainPage.qml" line="198"/>
         <source>Loading...</source>
         <translation>Načítání...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="171"/>
+        <location filename="../qml/pages/MainPage.qml" line="209"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="187"/>
+        <location filename="../qml/pages/MainPage.qml" line="225"/>
         <source>Prev</source>
         <translation>Předchozí</translation>
     </message>

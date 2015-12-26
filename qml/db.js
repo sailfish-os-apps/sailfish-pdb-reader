@@ -5,7 +5,7 @@ function open() {
 
 function firstrun() {
     ct.mkbasedir(qsTr("Books"));
-    ct.mkFakeBooks();
+    //ct.mkFakeBooks();
 }
 
 function initBook(book, encoding) {
@@ -25,7 +25,7 @@ function changeMode(mode) {
         book2.visible = false;
         book3.visible = false;
         base1.visible = true;
-        pageheader.title = qsTr("PDB book reader");
+        pageheader.text = qsTr("PDB book reader");
         textarea.text = welcometext;
         position = 0;
         current_book = "";
@@ -39,4 +39,29 @@ function listEncodings() {
     //var encodings = ct.listEncodings();
     return ["UTF-8","ISO-8859-1","GB2312","WINDOWS-1251","WINDOWS-1252","SHIFT JIS","GBK","WINDOWS-1256","ISO-8859-2","EUC-JP","ISO-8859-15","ISO-8859-9","WINDOWS-1250","WINDOWS-1254","EUC-KR","Big5","WINDOWS-874","US-ASCII","TIS-620","ISO-8859-7","WINDOWS-1255"];
     //return encodings.split("//\n");
+}
+
+function contrastMode(onoff) {
+    //return;
+    if(onoff === "on") {
+        bg.color = "white";
+        textarea.color = "black";
+        pageheader.color = "black";
+        nextbutton.color = "black";
+        prevbutton.color = "black";
+        contrast_mode = true;
+        open().transaction(function(tx) {
+            tx.executeSql("UPDATE contrast_mode SET onoff=1");
+        });
+    } else {
+        bg.color = "transparent";
+        textarea.color = Theme.highlightColor;
+        pageheader.color = Theme.secondaryHighlightColor;
+        nextbutton.color = Theme.primaryColor;
+        prevbutton.color = Theme.primaryColor;
+        contrast_mode = false;
+        open().transaction(function(tx) {
+            tx.executeSql("UPDATE contrast_mode SET onoff=0");
+        });
+    }
 }
