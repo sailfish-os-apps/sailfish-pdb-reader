@@ -5,8 +5,8 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="8"/>
-        <source>My Cover</source>
-        <translation>Můj obal</translation>
+        <source>PDB book reader</source>
+        <translation>PDB čtečka knih</translation>
     </message>
 </context>
 <context>
