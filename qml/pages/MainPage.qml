@@ -236,6 +236,11 @@ Page {
                     }
                 }
 
+                Item {
+                    width: parent.width
+                    height: 50
+                }
+
                 Component.onCompleted: {
                     //DB.contrastMode("on");
                     DB.open().transaction(function(tx) {
