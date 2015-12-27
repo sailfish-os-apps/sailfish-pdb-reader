@@ -70,6 +70,13 @@ Page {
             }
 
             MenuItem {
+                text: qsTr("About")
+                onClicked: {
+                    pageStack.push("About.qml");
+                }
+            }
+
+            MenuItem {
                 text: qsTr("Contrast mode")+": "+(contrast_mode?qsTr("On"):qsTr("Off"))
                 onClicked: {
                     if(contrast_mode) {

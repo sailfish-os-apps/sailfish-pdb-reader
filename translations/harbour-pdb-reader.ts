@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>About</name>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PDB book reader, version: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear books database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use it if you have problem with books. It will delete the whole books database, so you will have to start reading all books from beginning.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Author: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>License: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <source>PDB book reader</source>
@@ -94,6 +121,10 @@
     </message>
     <message>
         <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
