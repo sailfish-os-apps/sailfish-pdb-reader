@@ -4,7 +4,7 @@ import Sailfish.Silica 1.0
 import "../db.js" as DB
 
 Page {
-    property string version: "0.9b"
+    property string version: "0.9.1b"
     id: aboutpage
     SilicaFlickable {
         id: flickable
