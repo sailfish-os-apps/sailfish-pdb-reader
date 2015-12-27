@@ -48,6 +48,17 @@
     </message>
 </context>
 <context>
+    <name>Help</name>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This app is a really simple reader of PDB books. All books should be placed in &lt;b&gt;Books&lt;/b&gt; folder in your home folder (&lt;b&gt;/home/nemo&lt;/b&gt;) - for this you can use any file browser on your Jolla or you can put the files there from your computer via USB cable. This app creates the folder on its first run. If you have any problems with this app, feel free to contact me at &lt;a style=&apos;color:white;&apos; href=&apos;mailto:dominik@chrastecky.cz&apos;&gt;dominik@chrastecky.cz&lt;/a&gt; or on &lt;a href=&apos;https://openrepos.net/content/rikudousennin/pdb-book-reader&apos; style=&apos;color:white;&apos;&gt;OpenRepos&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ListBooks</name>
     <message>
         <source>Choose book</source>
@@ -137,6 +148,10 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>About</name>
     <message>
@@ -58,6 +58,19 @@
     </message>
 </context>
 <context>
+    <name>Help</name>
+    <message>
+        <location filename="../qml/pages/Help.qml" line="16"/>
+        <source>Help</source>
+        <translation>Nápověda</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Help.qml" line="24"/>
+        <source>This app is a really simple reader of PDB books. All books should be placed in &lt;b&gt;Books&lt;/b&gt; folder in your home folder (&lt;b&gt;/home/nemo&lt;/b&gt;) - for this you can use any file browser on your Jolla or you can put the files there from your computer via USB cable. This app creates the folder on its first run. If you have any problems with this app, feel free to contact me at &lt;a style=&apos;color:white;&apos; href=&apos;mailto:dominik@chrastecky.cz&apos;&gt;dominik@chrastecky.cz&lt;/a&gt; or on &lt;a href=&apos;https://openrepos.net/content/rikudousennin/pdb-book-reader&apos; style=&apos;color:white;&apos;&gt;OpenRepos&lt;/a&gt;.</source>
+        <translation>Tato aplikace je jednoduchou čtečkou PDB knížek. Všechny knížky by měly být uloženy ve složce &lt;b&gt;Knihy&lt;/b&gt; ve vaší domovské složce (&lt;b&gt;/home/nemo&lt;/b&gt;) - na to můžete použít kterýkoli prohlížeč souborů na své Jolle, nebo tam můžete soubory umístit z počítače pomocí USB kabelu. Tato aplikace vytvoří složku při prvním spuštění. Pokud máte s aplikací jakékoliv problémy, kontaktujte mě na &lt;a style=&apos;color:white;&apos; href=&apos;mailto:dominik@chrastecky.cz&apos;&gt;dominik@chrastecky.cz&lt;/a&gt; nebo na &lt;a href=&apos;https://openrepos.net/content/rikudousennin/pdb-book-reader&apos; style=&apos;color:white;&apos;&gt;OpenRepos&lt;/a&gt;.</translation>
+    </message>
+</context>
+<context>
     <name>ListBooks</name>
     <message>
         <location filename="../qml/pages/ListBooks.qml" line="22"/>
@@ -87,6 +100,7 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="12"/>
+        <location filename="../qml/pages/MainPage.qml" line="260"/>
         <source>Books</source>
         <translation>Knihy</translation>
     </message>
@@ -112,12 +126,12 @@
         <translation>Čtení obsahu knihy...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="92"/>
+        <location filename="../qml/pages/MainPage.qml" line="99"/>
         <source>Choose book</source>
         <translation>Zvolte knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="80"/>
+        <location filename="../qml/pages/MainPage.qml" line="87"/>
         <source>Contrast mode</source>
         <translation>Kontrastní mód</translation>
     </message>
@@ -128,46 +142,51 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="80"/>
+        <source>Help</source>
+        <translation>Nápověda</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="87"/>
         <source>On</source>
         <translation>Zapnut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="80"/>
+        <location filename="../qml/pages/MainPage.qml" line="87"/>
         <source>Off</source>
         <translation>Vypnut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="102"/>
+        <location filename="../qml/pages/MainPage.qml" line="109"/>
         <source>Reset book</source>
         <translation>Resetovat knihu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="117"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Change encoding</source>
         <translation>Změnit kódování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="138"/>
+        <location filename="../qml/pages/MainPage.qml" line="145"/>
         <source>Close book</source>
         <translation>Zavřít knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="185"/>
+        <location filename="../qml/pages/MainPage.qml" line="192"/>
         <source>PDB book reader</source>
         <translation>PDB čtečka knih</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="205"/>
+        <location filename="../qml/pages/MainPage.qml" line="212"/>
         <source>Loading...</source>
         <translation>Načítání...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="216"/>
+        <location filename="../qml/pages/MainPage.qml" line="223"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="232"/>
+        <location filename="../qml/pages/MainPage.qml" line="239"/>
         <source>Prev</source>
         <translation>Předchozí</translation>
     </message>

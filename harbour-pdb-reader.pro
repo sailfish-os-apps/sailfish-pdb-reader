@@ -27,5 +27,6 @@ DISTFILES += \
     qml/db.js \
     qml/pages/ListBooks.qml \
     qml/pages/ListEncoding.qml \
-    qml/pages/About.qml
+    qml/pages/About.qml \
+    qml/pages/Help.qml
 

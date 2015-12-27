@@ -5,39 +5,39 @@
     <name>About</name>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
     <message>
         <source>PDB book reader, version: </source>
-        <translation type="unfinished"></translation>
+        <translation>PDB book reader, version: </translation>
     </message>
     <message>
         <source>Clear books database</source>
-        <translation type="unfinished"></translation>
+        <translation>Rensa bokdatabasen</translation>
     </message>
     <message>
         <source>Use it if you have problem with books. It will delete the whole books database, so you will have to start reading all books from beginning.</source>
-        <translation type="unfinished"></translation>
+        <translation>Används om du får problem med böckerna. Den tar bort hela bokdatabasen, så att du kan börja läsa böckerna från början.</translation>
     </message>
     <message>
         <source>Author: </source>
-        <translation type="unfinished"></translation>
+        <translation>Utvecklare:</translation>
     </message>
     <message>
         <source>License: </source>
-        <translation type="unfinished"></translation>
+        <translation>Licens:</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Översättare</translation>
     </message>
     <message>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Svenska</translation>
     </message>
     <message>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Tjeckiska</translation>
     </message>
 </context>
 <context>
@@ -45,6 +45,17 @@
     <message>
         <source>PDB book reader</source>
         <translation>PDB book reader</translation>
+    </message>
+</context>
+<context>
+    <name>Help</name>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This app is a really simple reader of PDB books. All books should be placed in &lt;b&gt;Books&lt;/b&gt; folder in your home folder (&lt;b&gt;/home/nemo&lt;/b&gt;) - for this you can use any file browser on your Jolla or you can put the files there from your computer via USB cable. This app creates the folder on its first run. If you have any problems with this app, feel free to contact me at &lt;a style=&apos;color:white;&apos; href=&apos;mailto:dominik@chrastecky.cz&apos;&gt;dominik@chrastecky.cz&lt;/a&gt; or on &lt;a href=&apos;https://openrepos.net/content/rikudousennin/pdb-book-reader&apos; style=&apos;color:white;&apos;&gt;OpenRepos&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -85,7 +96,7 @@
     </message>
     <message>
         <source>Hello, Sailor! It looks like it&apos;s your first time using this app. The usage is pretty simple - put all your books in Books directory and then use pull down menu to choose your book. Then enjoy reading! :)</source>
-        <translation>Hallå! Det verkar vara första gången du använder den här appen. Det är ganska enkelt. Placera alla dina böcker i mappen &apos;Books&apos; och dra ner rullgardinsmenyn för att välja bok. Njut sedan av läsningen! :)</translation>
+        <translation>Hallå! Det verkar vara första gången du använder den här appen. Det är ganska enkelt. Placera alla dina böcker i mappen &apos;Böcker&apos; och dra ner rullgardinsmenyn för att välja bok. Njut sedan av läsningen! :)</translation>
     </message>
     <message>
         <source>Detecting encoding...</source>
@@ -137,6 +148,10 @@
     </message>
     <message>
         <source>About</source>
+        <translation>Om</translation>
+    </message>
+    <message>
+        <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

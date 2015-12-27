@@ -8,9 +8,22 @@ class CPPthings: public QObject {
     Q_OBJECT
 public:
     Q_INVOKABLE bool mkbasedir(const QString name) const {
-        QDir dir("/home/nemo/"+name);
+        bool created = false; // wether the dir was created during this run
+        QDir dir("/home/nemo/"+name); // creates base folder based on localization
         if(!dir.exists()) {
-            return dir.mkpath(".");
+            dir.mkpath(".");
+            created = true;
+        }
+        QString base("Books"); // base english name
+        if(base == name || created == false) { // if it is the same, no need to copy files, or if it was not created right now
+            return true;
+        }
+        QDir base_dir("/home/nemo/Books");
+        if(base_dir.exists()) { // if it was created before the localization to this language came
+            std::string c_name = name.toStdString();
+            std::string command = "cp /home/nemo/Books/* /home/nemo/"+c_name;
+            system(command.c_str());
+            system("rm -rf /home/nemo/Books");
         }
         return true;
     }

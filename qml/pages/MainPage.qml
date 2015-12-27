@@ -77,6 +77,13 @@ Page {
             }
 
             MenuItem {
+                text: qsTr("Help")
+                onClicked: {
+                    pageStack.push("Help.qml");
+                }
+            }
+
+            MenuItem {
                 text: qsTr("Contrast mode")+": "+(contrast_mode?qsTr("On"):qsTr("Off"))
                 onClicked: {
                     if(contrast_mode) {
@@ -250,6 +257,7 @@ Page {
 
                 Component.onCompleted: {
                     //DB.contrastMode("on");
+                    ct.mkbasedir(qsTr("Books"));
                     DB.open().transaction(function(tx) {
                         //tx.executeSql("DROP TABLE IF EXISTS firstrun"); // drop table so it's first run all the time
                         //tx.executeSql("DROP TABLE IF EXISTS books");
