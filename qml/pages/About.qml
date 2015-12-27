@@ -54,6 +54,16 @@ Page {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 text: qsTr("Use it if you have problem with books. It will delete the whole books database, so you will have to start reading all books from beginning.")
             }
+            PageHeader {
+                title: qsTr("Translators")
+            }
+
+            Label {
+                width: parent.width - Theme.paddingLarge * 2
+                wrapMode: Text.Wrap
+                x: Theme.paddingLarge
+                text: qsTr("Swedish")+": eson\n"+qsTr("Czech")+": Rikudou_Sennin"
+            }
         }
     }
 }

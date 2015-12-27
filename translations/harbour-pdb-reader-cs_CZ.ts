@@ -33,6 +33,21 @@
         <source>Use it if you have problem with books. It will delete the whole books database, so you will have to start reading all books from beginning.</source>
         <translation>Použijte, pokud máte problém s knihami. Smaže to celou databázi knih, takže budete muset začít číst všechny knihy od začátku.</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="58"/>
+        <source>Translators</source>
+        <translation>Překladatelé</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="65"/>
+        <source>Swedish</source>
+        <translation>Švédština</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/About.qml" line="65"/>
+        <source>Czech</source>
+        <translation>Čeština</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
