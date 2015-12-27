@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="cs_CZ">
+<TS version="2.1" language="cs_CZ">
 <context>
     <name>About</name>
     <message>
@@ -29,7 +29,7 @@
         <translation>Smazat databázi knih</translation>
     </message>
     <message>
-        <location filename="../qml/pages/About.qml" line="57"/>
+        <location filename="../qml/pages/About.qml" line="55"/>
         <source>Use it if you have problem with books. It will delete the whole books database, so you will have to start reading all books from beginning.</source>
         <translation>Použijte, pokud máte problém s knihami. Smaže to celou databázi knih, takže budete muset začít číst všechny knihy od začátku.</translation>
     </message>
