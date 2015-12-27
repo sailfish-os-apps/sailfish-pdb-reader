@@ -65,3 +65,10 @@ function contrastMode(onoff) {
         });
     }
 }
+
+function clearDatabase() {
+    ct.clearDatabase();
+    open().transaction(function(tx) {
+        tx.executeSql("DROP TABLE IF EXISTS books");
+    });
+}

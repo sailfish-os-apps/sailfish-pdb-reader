@@ -83,6 +83,11 @@ public:
     Q_INVOKABLE QString listEncodings() const {
         return QString::fromStdString(exec("iconv -l"));
     }
+
+    Q_INVOKABLE bool clearDatabase() const {
+        system("rm -rf /home/nemo/.config/harbour-pdb-reader/*");
+        return true;
+    }
 };
 
 #endif // CPPTHINGS

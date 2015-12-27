@@ -44,9 +44,7 @@ Page {
                 text: qsTr("Clear books database")
                 x: screen.width / 2 - width / 2
                 onClicked: {
-                    DB.open().transaction(function(tx) {
-                        tx.executeSql("DROP TABLE IF EXISTS books");
-                    });
+                    DB.clearDatabase();
                 }
             }
             Label {
