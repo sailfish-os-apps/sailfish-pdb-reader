@@ -31,7 +31,7 @@ public:
     Q_INVOKABLE QStringList listbooks(const QString name) const {
         QDir dir("/home/nemo/"+name);
         QStringList filters;
-        filters << "*.pdb";
+        filters << "*.pdb" << "*.epub";
         dir.setNameFilters(filters);
         return dir.entryList();
     }
