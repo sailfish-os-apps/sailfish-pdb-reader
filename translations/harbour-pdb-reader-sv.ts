@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
 <context>
     <name>About</name>
     <message>
@@ -51,11 +49,11 @@
     <name>Help</name>
     <message>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjälp</translation>
     </message>
     <message>
         <source>This app is a really simple reader of PDB books. All books should be placed in &lt;b&gt;Books&lt;/b&gt; folder in your home folder (&lt;b&gt;/home/nemo&lt;/b&gt;) - for this you can use any file browser on your Jolla or you can put the files there from your computer via USB cable. This app creates the folder on its first run. If you have any problems with this app, feel free to contact me at &lt;a style=&apos;color:white;&apos; href=&apos;mailto:dominik@chrastecky.cz&apos;&gt;dominik@chrastecky.cz&lt;/a&gt; or on &lt;a href=&apos;https://openrepos.net/content/rikudousennin/pdb-book-reader&apos; style=&apos;color:white;&apos;&gt;OpenRepos&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Den här appen är en verkligt enkel läsare för PDB-böcker. Alla böcker skall placeras i mappen &lt;b&gt;Böcker&lt;/b&gt;, i din hemkatalog (&lt;b&gt;/home/nemo&lt;/b&gt;). För detta ändamål kan du använda vilken filhanterare som helst på din Jolla eller också kan du flytta dit filerna från din dator, via USB-kabel. Appen skapar mappen vid första starten. Har du problem med appen, får du gärna kontakta mig på &lt;a style=&apos;color:white;&apos; href=&apos;mailto:dominik@chrastecky.cz&apos;&gt;dominik@chrastecky.cz&lt;/a&gt; eller på &lt;a href=&apos;https://openrepos.net/content/rikudousennin/pdb-book-reader&apos; style=&apos;color:white;&apos;&gt;OpenRepos&lt;/a&gt;.</translation>
     </message>
 </context>
 <context>
@@ -152,7 +150,7 @@
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjälp</translation>
     </message>
 </context>
 <context>
