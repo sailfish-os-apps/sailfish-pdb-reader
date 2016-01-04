@@ -13,7 +13,7 @@ Name:       harbour-pdb-reader
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    PDB Ebook reader
-Version:    0.9.2b
+Version:    0.9.3
 Release:    1
 Group:      Qt/Qt
 License:    WTFPL

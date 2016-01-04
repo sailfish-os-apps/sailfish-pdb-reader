@@ -61,10 +61,17 @@ Page {
                     textarea.text = qsTr("Reading book content...");
                     current_whole_text = ct.getBookContents(current_book);
                     current_visible_text = current_whole_text.substr(position,step);
+                    console.log(current_whole_text.length);
                     pageheader.text = bookname;
                     book_opened = true;
                     textarea.horizontalAlignment = Text.AlignLeft;
                     textarea.text = current_visible_text;
+                    if(position >= current_whole_text.length) {
+                        endoftheline.visible = true;
+                    } else {
+                        endoftheline.visible = false;
+                    }
+
                     DB.changeMode("book");
                 });
             }
@@ -217,9 +224,21 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
                 }
 
+                Label {
+                    id: endoftheline
+                    visible: false
+                    text: qsTr("That's it! You reached end of the book. I hope the reading was good and that you liked this app")
+                    width: screen.width - Theme.paddingLarge * 2
+                    color: Theme.highlightColor
+                    horizontalAlignment: Text.AlignHCenter
+                    x: Theme.paddingLarge
+                    wrapMode: Text.Wrap
+                }
+
                 Button {
                     id: nextbutton
                     visible: book_opened
+                    enabled: !endoftheline.visible
                     text: qsTr("Next")
                     x: screen.width / 2 - nextbutton.width / 2
                     onClicked: {
@@ -227,6 +246,13 @@ Page {
                         current_visible_text = current_whole_text.substr(position,step);
                         textarea.text = current_visible_text;
                         flickable.contentY = 0;
+
+                        if(position >= current_whole_text.length) {
+                            endoftheline.visible = true;
+                        } else {
+                            endoftheline.visible = false;
+                        }
+
                         DB.open().transaction(function(tx) {
                             tx.executeSql("UPDATE books SET position='"+position+"' WHERE original_name='"+current_book+"'");
                         });
@@ -244,9 +270,18 @@ Page {
                             position = 0;
                         }
 
+                        if(position >= current_whole_text.length) {
+                            endoftheline.visible = true;
+                        } else {
+                            endoftheline.visible = false;
+                        }
+
                         current_visible_text = current_whole_text.substr(position,step);
                         textarea.text = current_visible_text;
                         flickable.contentY = 0;
+                        DB.open().transaction(function(tx) {
+                            tx.executeSql("UPDATE books SET position='"+position+"' WHERE original_name='"+current_book+"'");
+                        });
                     }
                 }
 

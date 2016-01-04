@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="cs_CZ">
+<TS version="2.1" language="cs_CZ">
 <context>
     <name>About</name>
     <message>
@@ -100,7 +100,7 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="12"/>
-        <location filename="../qml/pages/MainPage.qml" line="260"/>
+        <location filename="../qml/pages/MainPage.qml" line="295"/>
         <source>Books</source>
         <translation>Knihy</translation>
     </message>
@@ -126,67 +126,72 @@
         <translation>Čtení obsahu knihy...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="99"/>
+        <location filename="../qml/pages/MainPage.qml" line="106"/>
         <source>Choose book</source>
         <translation>Zvolte knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="87"/>
+        <location filename="../qml/pages/MainPage.qml" line="94"/>
         <source>Contrast mode</source>
         <translation>Kontrastní mód</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="73"/>
+        <location filename="../qml/pages/MainPage.qml" line="80"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="80"/>
+        <location filename="../qml/pages/MainPage.qml" line="87"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="87"/>
+        <location filename="../qml/pages/MainPage.qml" line="94"/>
         <source>On</source>
         <translation>Zapnut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="87"/>
+        <location filename="../qml/pages/MainPage.qml" line="94"/>
         <source>Off</source>
         <translation>Vypnut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="109"/>
+        <location filename="../qml/pages/MainPage.qml" line="116"/>
         <source>Reset book</source>
         <translation>Resetovat knihu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="124"/>
+        <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Change encoding</source>
         <translation>Změnit kódování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="145"/>
+        <location filename="../qml/pages/MainPage.qml" line="152"/>
         <source>Close book</source>
         <translation>Zavřít knížku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="192"/>
+        <location filename="../qml/pages/MainPage.qml" line="199"/>
         <source>PDB book reader</source>
         <translation>PDB čtečka knih</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="212"/>
+        <location filename="../qml/pages/MainPage.qml" line="219"/>
         <source>Loading...</source>
         <translation>Načítání...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="223"/>
+        <location filename="../qml/pages/MainPage.qml" line="230"/>
+        <source>That&apos;s it! You reached end of the book. I hope the reading was good and that you liked this app</source>
+        <translation>A je to! Dosáhli jste až na konec knížky. Doufám, že jste si čtení užili a že se Vám aplikace líbila</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="242"/>
         <source>Next</source>
         <translation>Další</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="239"/>
+        <location filename="../qml/pages/MainPage.qml" line="265"/>
         <source>Prev</source>
         <translation>Předchozí</translation>
     </message>

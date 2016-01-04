@@ -152,6 +152,10 @@
         <source>Help</source>
         <translation>Hjälp</translation>
     </message>
+    <message>
+        <source>That&apos;s it! You reached end of the book. I hope the reading was good and that you liked this app</source>
+        <translation>Det var allt! Du har nått slutet på boken. Jag hoppas läsningen var bra och att du gillar den här appen.</translation>
+    </message>
 </context>
 <context>
     <name>db</name>
