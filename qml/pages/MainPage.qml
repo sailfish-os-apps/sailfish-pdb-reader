@@ -183,6 +183,45 @@ Page {
             color: "transparent"
             width: parent.width
             height: page.height > column.height?page.height:column.height
+
+            Item {
+                id: infocolumn
+                width: column.width
+                height: screen.height
+                visible: !column.visible
+                Label {
+                    property int percent: Math.floor(position / current_whole_text.length * 100)
+                    id: percenttext
+                    anchors.centerIn: parent
+                    text: qsTr("Position: %1/%2\nPercent: %3%").arg(position > current_whole_text.length?current_whole_text.length:position).arg(current_whole_text.length).arg(Math.floor(percent > 100?100:percent))
+                    horizontalAlignment: Text.AlignHCenter
+                    color: Theme.highlightColor
+                }
+            }
+
+            MouseArea {
+                id: showinfo
+                height: parent.height
+                width: page.width / 4
+                anchors.right: parent.right
+                onPressed: {
+                    if(current_whole_text) {
+                        column.visible = false;
+                        infocolumn.y = flickable.contentY;
+                    }
+                }
+                onReleased: {
+                    if(current_whole_text) {
+                        column.visible = true;
+                    }
+                }
+                onCanceled: {
+                    if(current_whole_text) {
+                        column.visible = true;
+                    }
+                }
+            }
+
             Column {
                 id: column
 

@@ -50,6 +50,7 @@ function contrastMode(onoff) {
         nextbutton.color = "black";
         prevbutton.color = "black";
         endoftheline.color = "black";
+        percenttext.color = "black";
         contrast_mode = true;
         open().transaction(function(tx) {
             tx.executeSql("UPDATE contrast_mode SET onoff=1");
@@ -61,6 +62,7 @@ function contrastMode(onoff) {
         nextbutton.color = Theme.primaryColor;
         prevbutton.color = Theme.primaryColor;
         endoftheline.color = Theme.highlightColor;
+        percenttext.color = Theme.highlightColor;
         contrast_mode = false;
         open().transaction(function(tx) {
             tx.executeSql("UPDATE contrast_mode SET onoff=0");

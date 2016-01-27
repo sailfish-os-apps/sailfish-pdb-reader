@@ -156,6 +156,12 @@
         <source>That&apos;s it! You reached end of the book. I hope the reading was good and that you liked this app</source>
         <translation>Det var allt! Du har nått slutet på boken. Jag hoppas läsningen var bra och att du gillar den här appen.</translation>
     </message>
+    <message>
+        <source>Position: %1/%2
+Percent: %3%</source>
+        <translation>Position: %1/%2
+Procent: %3%</translation>
+    </message>
 </context>
 <context>
     <name>db</name>

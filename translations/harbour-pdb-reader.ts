@@ -158,6 +158,11 @@
         <source>That&apos;s it! You reached end of the book. I hope the reading was good and that you liked this app</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Position: %1/%2
+Percent: %3%</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>db</name>
