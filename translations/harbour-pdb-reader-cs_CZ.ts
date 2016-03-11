@@ -39,6 +39,10 @@
         <source>Czech</source>
         <translation>Čeština</translation>
     </message>
+    <message>
+        <source>German</source>
+        <translation>Němčina</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

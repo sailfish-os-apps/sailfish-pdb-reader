@@ -39,6 +39,10 @@
         <source>Czech</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
