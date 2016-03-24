@@ -18,6 +18,7 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-pdb-reader-cs_CZ.ts
 TRANSLATIONS += translations/harbour-pdb-reader-sv.ts
 TRANSLATIONS += translations/harbour-pdb-reader-de.ts
+TRANSLATIONS += translations/harbour-pdb-reader-hu.ts
 
 HEADERS += \
     exec.h \

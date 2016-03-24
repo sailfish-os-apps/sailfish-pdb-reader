@@ -62,7 +62,7 @@ Page {
                 width: parent.width - Theme.paddingLarge * 2
                 wrapMode: Text.Wrap
                 x: Theme.paddingLarge
-                text: qsTr("Swedish")+": eson\n"+qsTr("Czech")+": Rikudou_Sennin\n"+qsTr("German")+": Alex217"
+                text: qsTr("Swedish")+": eson\n"+qsTr("Czech")+": Rikudou_Sennin\n"+qsTr("German")+": Alex217\n"+qsTr("Hungarian")+": Headarias"
             }
         }
     }

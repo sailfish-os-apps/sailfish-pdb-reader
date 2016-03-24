@@ -43,6 +43,10 @@
         <source>German</source>
         <translation>Deutsch</translation>
     </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

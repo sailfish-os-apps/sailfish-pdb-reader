@@ -43,6 +43,10 @@
         <source>German</source>
         <translation>Tyska</translation>
     </message>
+    <message>
+        <source>Hungarian</source>
+        <translation>Ungerska</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

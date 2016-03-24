@@ -43,6 +43,10 @@
         <source>German</source>
         <translation>Němčina</translation>
     </message>
+    <message>
+        <source>Hungarian</source>
+        <translation>Maďarština</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
