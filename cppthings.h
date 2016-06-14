@@ -2,6 +2,8 @@
 #define CPPTHINGS
 
 #include <QDir>
+#include <QTextStream>
+#include <QFile>
 #include "exec.h"
 
 class CPPthings: public QObject {
@@ -32,22 +34,9 @@ public:
         QDir dir("/home/nemo/"+name);
         QStringList filters;
         filters << "*.pdb";
+        filters << "*.txt";
         dir.setNameFilters(filters);
         return dir.entryList();
-    }
-
-    Q_INVOKABLE bool mkFakeBooks() const {
-        system("touch /home/nemo/Books/test1.pdb");
-        system("touch /home/nemo/Books/test2.pdb");
-        system("touch /home/nemo/Books/test3.pdb");
-        return true;
-    }
-
-    Q_INVOKABLE bool rmFakeBooks() const {
-        system("rm -rf /home/nemo/Books/test1.pdb");
-        system("rm -rf /home/nemo/Books/test2.pdb");
-        system("rm -rf /home/nemo/Books/test3.pdb");
-        return true;
     }
 
     Q_INVOKABLE QString getEncoding(const QString book) const {
@@ -56,7 +45,7 @@ public:
         return QString::fromStdString(exec(command.c_str())).trimmed();
     }
 
-    Q_INVOKABLE bool makeTxt(const QString book, const QString name) const {
+    Q_INVOKABLE bool makeTxt(const QString book, const QString name, QString format) const {
         QFileInfo file("/home/nemo/.config/harbour-pdb-reader/"+book+".txt");
         if(file.exists()) {
             return true;
@@ -64,8 +53,17 @@ public:
         std::string c_book = book.toStdString();
         std::string c_name = name.toStdString();
         std::string command = "txt2pdbdoc -d -D \"/home/nemo/"+c_name+"/"+c_book+"\" > \"/home/nemo/.config/harbour-pdb-reader/"+c_book+".txt\"";
-        system("mkdir -p /home/nemo/.config/harbour-pdb-reader");
-        system(command.c_str());
+        QDir dir("/home/nemo/.config/harbour-pdb-reader");
+        if(!dir.exists()) {
+            dir.mkpath(".");
+        }
+        if(format == "pdb") {
+            system(command.c_str());
+        }
+        if(format == "txt") {
+            std::string command2 = "cp \"/home/nemo/"+c_name+"/"+c_book+"\" \"/home/nemo/.config/harbour-pdb-reader/"+c_book+".txt\"";
+            system(command2.c_str());
+        }
         return true;
     }
 
@@ -88,9 +86,13 @@ public:
     }
 
     Q_INVOKABLE QString getBookContents(const QString book) const {
-        std::string c_book = book.toStdString();
-        std::string command = "cat \"/home/nemo/.config/harbour-pdb-reader/utf8/"+c_book+".txt\"";
-        return QString::fromStdString(exec(command.c_str()));
+        QFile file(QString("/home/nemo/.config/harbour-pdb-reader/utf8/")+book+QString(".txt"));
+        file.open(QIODevice::ReadOnly);
+        QString result;
+        QTextStream stream(&file);
+        result = stream.readAll();
+        file.close();
+        return result;
     }
 
     Q_INVOKABLE QString listEncodings() const {

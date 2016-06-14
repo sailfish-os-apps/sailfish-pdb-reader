@@ -23,16 +23,6 @@ Page {
         id: flickable
         anchors.fill: parent
 
-        /*onMovementEnded: {
-            var pos = flickable.visibleArea.yPosition + flickable.visibleArea.heightRatio;
-            if(pos >= 0.999 && book_opened) {
-                position = position + step;
-                current_visible_text = current_whole_text.substr(position,step);
-                textarea.text = current_visible_text;
-                flickable.contentY = 0;
-            }
-        }*/
-
         PullDownMenu {
             id: pulldown
             visible: false
@@ -41,7 +31,8 @@ Page {
                 current_book = bookname;
                 textarea.horizontalAlignment = Text.AlignHCenter;
                 textarea.text = qsTr("Accessing file...");
-                ct.makeTxt(current_book,dir);
+                var format = DB.isPDB(current_book)?"pdb":"txt";
+                ct.makeTxt(current_book,dir,format);
                 textarea.text = qsTr("Detecting encoding...");
                 var encoding = ct.getEncoding(current_book+".txt");
                 textarea.text = qsTr("Detecting encoding...")+" "+encoding;
@@ -52,8 +43,6 @@ Page {
                     } else {
                         position = res.rows.item(0).position;
                         encoding = res.rows.item(0).encoding;
-                        console.log(encoding);
-                        console.log(position);
                     }
 
                     textarea.text = qsTr("Reencoding...");
@@ -77,6 +66,7 @@ Page {
             }
 
             MenuItem {
+                id: about
                 text: qsTr("About")
                 onClicked: {
                     pageStack.push("About.qml");
@@ -84,6 +74,7 @@ Page {
             }
 
             MenuItem {
+                id: help
                 text: qsTr("Help")
                 onClicked: {
                     pageStack.push("Help.qml");
